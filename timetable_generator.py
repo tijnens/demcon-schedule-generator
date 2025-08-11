@@ -1,3 +1,9 @@
+"""
+This script takes a single command line argument specifying the data file.
+It reads and parses the data, and invokes build() from build_html.py to 
+generate the HTML file containing the timetable.
+"""
+
 import sys
 
 from collections import defaultdict
@@ -53,4 +59,5 @@ for i, line in enumerate(input.split('\n')):
 
 build(schedule, schedule_list, festival_start, festival_end)
 print(f'Number of stages needed: {len(schedule)}')
+
 
