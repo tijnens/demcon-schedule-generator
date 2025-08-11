@@ -18,7 +18,7 @@ OUPUT_DEST = "timetable.html"
 
 
 def build(schedule, schedule_list, festival_start, festival_end):
-    all_hours = range(festival_start, festival_end)
+    all_hours = range(festival_start, festival_end + 1)
     all_stages = sorted(schedule.keys())
     hour_to_col = {h: idx + 2 for idx, h in enumerate(all_hours)}  # +2 because col1 is stage labels
     stage_to_row = {s: idx + 2 for idx, s in enumerate(all_stages)}     # +2 because row1 is time headers
@@ -71,4 +71,5 @@ def build(schedule, schedule_list, festival_start, festival_end):
     )
 
     Path(OUPUT_DEST).write_text(html, encoding="utf-8")
+
     print(f'Timetable saved to {OUPUT_DEST}')
