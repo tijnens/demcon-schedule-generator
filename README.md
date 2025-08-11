@@ -3,7 +3,7 @@
 This project contains a script to generate an HTML timetable for the DEMCON festival based on a .txt data file provided by the user. The script automatically determines the required number of stages, and assigns acts to stages such that there is no overlap between acts on a single stage.
 
 ## Data file
-The data file should be a .txt containing whitespace separated fields in the following format: `act_name, start_hour, end_hour`. Each row corresponds to a single act. See 'example_input.txt' for an example. Note that the `act_name` field cannot contain a whitespace, and `start_hour` and `end_hour` should be integers.
+The data file should be a .txt containing rows of whitespace separated fields in the following format: `act_name, start_hour, end_hour`. Each row corresponds to a single act. See 'example_input.txt' for an example. Note that the `act_name` field cannot contain a whitespace, and `start_hour` and `end_hour` should be integers.
 
 #### Assigning priority
 Acts are given priority based on their position in the data file. I.e. if multiple acts overlap, the first one encountered will be assigned to the first stage, the second one to the second stage, etc. E.g. if the Demcon Band, Taylor Swift and Coldplay overlap, you'll want to enter them in this order to make sure the Demcon Band gets the stage it deserves:
@@ -27,4 +27,5 @@ Number of stages needed: 9
 ```
 
 You can now open the HTML file in your browser to view it.
+
 
