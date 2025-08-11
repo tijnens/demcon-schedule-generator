@@ -19,4 +19,11 @@ To run the script on the example input, run:
 python build_timetable.py example_input.txt
 ```
 
-To run it on your own input, replace `example_input.txt` with the file path pointing to your data file.
+To run it on your own input, replace `example_input.txt` with the file path pointing to your data file. A message will be output telling you where the HTML was saved, and how many stages are needed:
+
+```
+Timetable saved to timetable.html
+Number of stages needed: 9
+```
+
+You can now open the HTML file in your browser to view it.
