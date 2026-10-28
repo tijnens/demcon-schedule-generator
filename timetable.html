@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>DEMCON Non Stop Festival Timetable</title>
+    <style>
+        :root {
+            --gap: 8px;
+            --border: #e5e7eb;
+            --text: #111827;
+            --muted: #6b7280;
+            --header-bg: #f8fafc;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans';
+            color: var(--text);
+            margin: 16px;
+            background: #fff;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            margin: 0 0 12px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 12px;
+        }
+
+        .header img {
+            height: 100px;
+        }
+
+        .tagline {
+            font-family: 'Merriweather', Georgia, serif;
+            font-size: 2.4rem;
+            font-weight: 400;
+            line-height: 1.2;
+            color: #444;
+        }
+
+        /* Horizontal timetable */
+        .grid {
+            display: grid;
+            grid-auto-rows: 64px;
+            /* one row per stage */
+            grid-template-columns: 120px repeat(47, 80px);
+            /* col1=stage labels, rest=hours */
+            gap: var(--gap);
+            align-items: center;
+        }
+
+        .time-header {
+            font-weight: 600;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        .stage-label {
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            padding-left: 6px;
+        }
+
+        .block {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 6px 8px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .block-title {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 2px;
+        }
+
+        .block-time {
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        @media print {
+            body {
+                margin: 0;
+            }
+
+            .grid {
+                gap: 4px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="logo-demcon.png" alt"DEMCON logo">
+        <p class="tagline">sleep tomorrow.<br>party today.</p>
+    </div>
+    <h1>DEMCON Non Stop Festival Timetable</h1>
+    <div class="grid">
+        <div></div>
+        <div class="time-header" style="grid-row:1; grid-column:2;">1:00</div><div class="time-header" style="grid-row:1; grid-column:3;">2:00</div><div class="time-header" style="grid-row:1; grid-column:4;">3:00</div><div class="time-header" style="grid-row:1; grid-column:5;">4:00</div><div class="time-header" style="grid-row:1; grid-column:6;">5:00</div><div class="time-header" style="grid-row:1; grid-column:7;">6:00</div><div class="time-header" style="grid-row:1; grid-column:8;">7:00</div><div class="time-header" style="grid-row:1; grid-column:9;">8:00</div><div class="time-header" style="grid-row:1; grid-column:10;">9:00</div><div class="time-header" style="grid-row:1; grid-column:11;">10:00</div><div class="time-header" style="grid-row:1; grid-column:12;">11:00</div><div class="time-header" style="grid-row:1; grid-column:13;">12:00</div><div class="time-header" style="grid-row:1; grid-column:14;">13:00</div><div class="time-header" style="grid-row:1; grid-column:15;">14:00</div><div class="time-header" style="grid-row:1; grid-column:16;">15:00</div><div class="time-header" style="grid-row:1; grid-column:17;">16:00</div><div class="time-header" style="grid-row:1; grid-column:18;">17:00</div><div class="time-header" style="grid-row:1; grid-column:19;">18:00</div><div class="time-header" style="grid-row:1; grid-column:20;">19:00</div><div class="time-header" style="grid-row:1; grid-column:21;">20:00</div><div class="time-header" style="grid-row:1; grid-column:22;">21:00</div><div class="time-header" style="grid-row:1; grid-column:23;">22:00</div><div class="time-header" style="grid-row:1; grid-column:24;">23:00</div><div class="time-header" style="grid-row:1; grid-column:25;">24:00</div><div class="time-header" style="grid-row:1; grid-column:26;">25:00</div><div class="time-header" style="grid-row:1; grid-column:27;">26:00</div><div class="time-header" style="grid-row:1; grid-column:28;">27:00</div><div class="time-header" style="grid-row:1; grid-column:29;">28:00</div><div class="time-header" style="grid-row:1; grid-column:30;">29:00</div><div class="time-header" style="grid-row:1; grid-column:31;">30:00</div><div class="time-header" style="grid-row:1; grid-column:32;">31:00</div><div class="time-header" style="grid-row:1; grid-column:33;">32:00</div><div class="time-header" style="grid-row:1; grid-column:34;">33:00</div><div class="time-header" style="grid-row:1; grid-column:35;">34:00</div><div class="time-header" style="grid-row:1; grid-column:36;">35:00</div><div class="time-header" style="grid-row:1; grid-column:37;">36:00</div><div class="time-header" style="grid-row:1; grid-column:38;">37:00</div><div class="time-header" style="grid-row:1; grid-column:39;">38:00</div><div class="time-header" style="grid-row:1; grid-column:40;">39:00</div><div class="time-header" style="grid-row:1; grid-column:41;">40:00</div><div class="time-header" style="grid-row:1; grid-column:42;">41:00</div><div class="time-header" style="grid-row:1; grid-column:43;">42:00</div><div class="time-header" style="grid-row:1; grid-column:44;">43:00</div><div class="time-header" style="grid-row:1; grid-column:45;">44:00</div><div class="time-header" style="grid-row:1; grid-column:46;">45:00</div><div class="time-header" style="grid-row:1; grid-column:47;">46:00</div><div class="time-header" style="grid-row:1; grid-column:48;">47:00</div>
+        <div class="stage-label" style="grid-row:2; grid-column:1;">Stage 1</div><div class="stage-label" style="grid-row:3; grid-column:1;">Stage 2</div><div class="stage-label" style="grid-row:4; grid-column:1;">Stage 3</div><div class="stage-label" style="grid-row:5; grid-column:1;">Stage 4</div><div class="stage-label" style="grid-row:6; grid-column:1;">Stage 5</div><div class="stage-label" style="grid-row:7; grid-column:1;">Stage 6</div><div class="stage-label" style="grid-row:8; grid-column:1;">Stage 7</div><div class="stage-label" style="grid-row:9; grid-column:1;">Stage 8</div><div class="stage-label" style="grid-row:10; grid-column:1;">Stage 9</div>
+        <div class="block"
+                style="grid-row:2; grid-column:30 / span 5; background:hsl(40 70% 85%);"
+                title="show_1 (29:00–33:59)">
+                <div class="block-title">show_1</div>
+                <div class="block-time">29:00–33:59</div>
+            </div><div class="block"
+                style="grid-row:2; grid-column:3 / span 8; background:hsl(40 70% 85%);"
+                title="show_2 (2:00–9:59)">
+                <div class="block-title">show_2</div>
+                <div class="block-time">2:00–9:59</div>
+            </div><div class="block"
+                style="grid-row:2; grid-column:45 / span 4; background:hsl(40 70% 85%);"
+                title="show_3 (44:00–47:59)">
+                <div class="block-title">show_3</div>
+                <div class="block-time">44:00–47:59</div>
+            </div><div class="block"
+                style="grid-row:3; grid-column:27 / span 5; background:hsl(320 70% 85%);"
+                title="show_4 (26:00–30:59)">
+                <div class="block-title">show_4</div>
+                <div class="block-time">26:00–30:59</div>
+            </div><div class="block"
+                style="grid-row:2; grid-column:16 / span 6; background:hsl(40 70% 85%);"
+                title="show_5 (15:00–20:59)">
+                <div class="block-title">show_5</div>
+                <div class="block-time">15:00–20:59</div>
+            </div><div class="block"
+                style="grid-row:3; grid-column:9 / span 8; background:hsl(320 70% 85%);"
+                title="show_6 (8:00–15:59)">
+                <div class="block-title">show_6</div>
+                <div class="block-time">8:00–15:59</div>
+            </div><div class="block"
+                style="grid-row:4; grid-column:3 / span 8; background:hsl(240 70% 85%);"
+                title="show_7 (2:00–9:59)">
+                <div class="block-title">show_7</div>
+                <div class="block-time">2:00–9:59</div>
+            </div><div class="block"
+                style="grid-row:4; grid-column:31 / span 5; background:hsl(240 70% 85%);"
+                title="show_8 (30:00–34:59)">
+                <div class="block-title">show_8</div>
+                <div class="block-time">30:00–34:59</div>
+            </div><div class="block"
+                style="grid-row:5; grid-column:2 / span 9; background:hsl(120 70% 85%);"
+                title="show_9 (1:00–9:59)">
+                <div class="block-title">show_9</div>
+                <div class="block-time">1:00–9:59</div>
+            </div><div class="block"
+                style="grid-row:4; grid-column:21 / span 9; background:hsl(240 70% 85%);"
+                title="show_10 (20:00–28:59)">
+                <div class="block-title">show_10</div>
+                <div class="block-time">20:00–28:59</div>
+            </div><div class="block"
+                style="grid-row:3; grid-column:2 / span 4; background:hsl(320 70% 85%);"
+                title="show_11 (1:00–4:59)">
+                <div class="block-title">show_11</div>
+                <div class="block-time">1:00–4:59</div>
+            </div><div class="block"
+                style="grid-row:6; grid-column:3 / span 10; background:hsl(80 70% 85%);"
+                title="show_12 (2:00–11:59)">
+                <div class="block-title">show_12</div>
+                <div class="block-time">2:00–11:59</div>
+            </div><div class="block"
+                style="grid-row:5; grid-column:27 / span 4; background:hsl(120 70% 85%);"
+                title="show_13 (26:00–29:59)">
+                <div class="block-title">show_13</div>
+                <div class="block-time">26:00–29:59</div>
+            </div><div class="block"
+                style="grid-row:7; grid-column:6 / span 6; background:hsl(0 70% 85%);"
+                title="show_14 (5:00–10:59)">
+                <div class="block-title">show_14</div>
+                <div class="block-time">5:00–10:59</div>
+            </div><div class="block"
+                style="grid-row:3; grid-column:38 / span 8; background:hsl(320 70% 85%);"
+                title="show_15 (37:00–44:59)">
+                <div class="block-title">show_15</div>
+                <div class="block-time">37:00–44:59</div>
+            </div><div class="block"
+                style="grid-row:6; grid-column:28 / span 9; background:hsl(80 70% 85%);"
+                title="show_16 (27:00–35:59)">
+                <div class="block-title">show_16</div>
+                <div class="block-time">27:00–35:59</div>
+            </div><div class="block"
+                style="grid-row:2; grid-column:37 / span 4; background:hsl(40 70% 85%);"
+                title="show_17 (36:00–39:59)">
+                <div class="block-title">show_17</div>
+                <div class="block-time">36:00–39:59</div>
+            </div><div class="block"
+                style="grid-row:8; grid-column:5 / span 7; background:hsl(160 70% 85%);"
+                title="show_18 (4:00–10:59)">
+                <div class="block-title">show_18</div>
+                <div class="block-time">4:00–10:59</div>
+            </div><div class="block"
+                style="grid-row:4; grid-column:36 / span 10; background:hsl(240 70% 85%);"
+                title="show_19 (35:00–44:59)">
+                <div class="block-title">show_19</div>
+                <div class="block-time">35:00–44:59</div>
+            </div><div class="block"
+                style="grid-row:7; grid-column:23 / span 9; background:hsl(0 70% 85%);"
+                title="show_20 (22:00–30:59)">
+                <div class="block-title">show_20</div>
+                <div class="block-time">22:00–30:59</div>
+            </div><div class="block"
+                style="grid-row:5; grid-column:16 / span 6; background:hsl(120 70% 85%);"
+                title="show_21 (15:00–20:59)">
+                <div class="block-title">show_21</div>
+                <div class="block-time">15:00–20:59</div>
+            </div><div class="block"
+                style="grid-row:5; grid-column:43 / span 5; background:hsl(120 70% 85%);"
+                title="show_22 (42:00–46:59)">
+                <div class="block-title">show_22</div>
+                <div class="block-time">42:00–46:59</div>
+            </div><div class="block"
+                style="grid-row:9; grid-column:7 / span 4; background:hsl(200 70% 85%);"
+                title="show_23 (6:00–9:59)">
+                <div class="block-title">show_23</div>
+                <div class="block-time">6:00–9:59</div>
+            </div><div class="block"
+                style="grid-row:3; grid-column:20 / span 5; background:hsl(320 70% 85%);"
+                title="show_24 (19:00–23:59)">
+                <div class="block-title">show_24</div>
+                <div class="block-time">19:00–23:59</div>
+            </div><div class="block"
+                style="grid-row:5; grid-column:32 / span 8; background:hsl(120 70% 85%);"
+                title="show_25 (31:00–38:59)">
+                <div class="block-title">show_25</div>
+                <div class="block-time">31:00–38:59</div>
+            </div><div class="block"
+                style="grid-row:6; grid-column:38 / span 5; background:hsl(80 70% 85%);"
+                title="show_26 (37:00–41:59)">
+                <div class="block-title">show_26</div>
+                <div class="block-time">37:00–41:59</div>
+            </div><div class="block"
+                style="grid-row:8; grid-column:31 / span 7; background:hsl(160 70% 85%);"
+                title="show_27 (30:00–36:59)">
+                <div class="block-title">show_27</div>
+                <div class="block-time">30:00–36:59</div>
+            </div><div class="block"
+                style="grid-row:6; grid-column:15 / span 8; background:hsl(80 70% 85%);"
+                title="show_28 (14:00–21:59)">
+                <div class="block-title">show_28</div>
+                <div class="block-time">14:00–21:59</div>
+            </div><div class="block"
+                style="grid-row:10; grid-column:6 / span 9; background:hsl(280 70% 85%);"
+                title="show_29 (5:00–13:59)">
+                <div class="block-title">show_29</div>
+                <div class="block-time">5:00–13:59</div>
+            </div><div class="block"
+                style="grid-row:3; grid-column:34 / span 4; background:hsl(320 70% 85%);"
+                title="show_30 (33:00–36:59)">
+                <div class="block-title">show_30</div>
+                <div class="block-time">33:00–36:59</div>
+            </div>
+    </div>
+</body>
+
+</html>
