@@ -16,7 +16,7 @@ TaylorSwift 2 8
 ## How to run
 To run the script on the example input, run:
 ```bash
-python build_timetable.py example_input.txt
+python timetable_generator.py example_input.txt
 ```
 
 To run it on your own input, replace `example_input.txt` with the file path pointing to your data file. A message will be output telling you where the HTML was saved, and how many stages are needed:
@@ -28,4 +28,13 @@ Number of stages needed: 9
 
 You can now open the HTML file in your browser to view it.
 
+## Background
+
+This project was developed during a hackathon organized by DEMCON.
+
+The challenge was to generate a festival timetable from a list of performances, automatically assigning stages while ensuring that no two performances on the same stage overlap.
+
+My solution uses a greedy scheduling algorithm implemented in Python and generates a visual timetable using an HTML template and CSS Grid.
+
+The project was developed as a hackathon prototype rather than a production-ready scheduling system.
 
